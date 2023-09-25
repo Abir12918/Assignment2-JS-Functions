@@ -1,24 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>myEach Demo</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>myFilter Demo</title>
 </head>
 <body>
-  <h1>myEach Demo</h1>
+    <h1>myFilter Demo</h1>
 
-  <section>
-    <h2>Description</h2>
-    <p>
-      This is a simple demonstration of a custom JavaScript function called "myEach" that allows you to iterate over an array of elements and execute a callback function on each element. In this example, you can enter a list of elements separated by commas in the input field below, and then click the "Process" button to display the content of the array using the "myEach" function.
-    </p>
-  </section>
+    <section>
+        <h2>Description</h2>
+        <p>
+            This is a simple demonstration of a custom JavaScript function called "myFilter" that allows you to filter an array of words and return a new array containing words that start with the letter 'A'. In this example, you can enter a list of words separated by commas in the input field below, and then click the "Filter" button to see the filtered words.
+        </p>
+    </section>
 
-  <p>Enter elements (comma-separated):</p>
-  <input type="text" id="inputArray">
-  <button onclick="processInput()">Enter</button>
-  <div id="output"></div>
+    <p>Enter words (comma-separated):</p>
+    <input type="text" id="inputArray">
+    <button onclick="filterWords()">Filter</button>
+    <div id="output"></div>
 
-  <script src="script.js"></script>
+
+    <title>myMap Demo</title>
+</head>
+<body>
+    <h1>myMap Demo</h1>
+
+    <section>
+        <h2>Description</h2>
+        <p>
+            This is a simple demonstration of a custom JavaScript function called "myMap" that allows you to apply a callback function to each element in an input array and create a new array with the results. In this example, you can enter a list of numbers separated by commas in the input field below, and then click the "Square" button to calculate the squares of each number.
+        </p>
+    </section>
+
+    <p>Enter numbers (comma-separated):</p>
+    <input type="text" id="inputArray">
+    <button onclick="calculateSquares()">Square</button>
+    <div id="output"></div>
+
+    <h1>myEach Demo</h1>
+
+    <section>
+        <h2>Description</h2>
+        <p>
+            This is a simple demonstration of a custom JavaScript function called "myEach" that allows you to iterate over an array of elements and execute a callback function on each element. In this example, you can enter a list of elements separated by commas in the input field below, and then click the "Process" button to display the content of the array using the "myEach" function.
+        </p>
+    </section>
+
+    <p>Enter elements (comma-separated):</p>
+    <input type="text" id="inputArray">
+    <button onclick="processInput()">Enter</button>
+    <div id="output"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>
