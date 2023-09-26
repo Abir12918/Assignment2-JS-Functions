@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Funtions 4-6</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<container id="">
+  <h1>mySome </h1>
+
+  <section>
+    <h2>mySome</h2>
+    <p>
+        mySome function checks if an array contains certain values that pass the conditional set by the callback function. In my example, imagine you are applying for jobs, yet you want a position that offers double what you are currently making. In the first box enter several salaries from different jobs. The second box will be the amount that you are making. mySome takes in any callback function that returns a boolean. In this example, the callback function I use doubles the salary, inputted by the user. If any of the values are equal or more than the amount means there is at least one job that meets the criteria   </section>
+
+  <p>Amount Per Hour For Several Jobs (comma-separated):</p>
+  <div> <input type="text" id="mySomeInputArray"></div>
+  p>Enter your current salary per hour:</p>
+  <div> <input type="text" id="mySomeInputElement"></div>
+  <button onclick="mySomeArrayInput()">Check for Some</button>
+  <div id="mySomeOutput"></div>
+
+  <script src="script.js"></script>
+</container>
+
+<container>
+    <h1>myEvery </h1>
+  
+    <section>
+      <h2>Description</h2>
+      <p>
+        myEvery checks if all the values in the array meet the condition set by the function. Imagine you want to make a list of movies after a certain year. The function will return true if every single year in the list is after that year you input. To see this work, enter a list of years, and in the second box enter the year you want to set as a divider.      </p>
+    </section>
+  
+    <p>Enter Years of When The Film was made (comma-separated):</p>
+    <div> <input type="text" id="myEveryInputArray"> </div>
+    <p>Enter The Year of the Oldest Movie You are Willing To See:</p>
+    <div> <input type="text" id="myEveryInputElement"></div>
+    <button onclick="myEveryArrayInput()">Check for Every</button>
+    <div id="myEveryOutput"></div>
+  
+    <script src="script.js"></script>
+  </container>
+
+  <container>
+    <h1>myReduce </h1>
+  
+    <section>
+      <h2>Description</h2>
+      <p>
+        myReduces takes all the values of a array and then returns one function. how the values are reduced are based upon the callback function that you use. In my example i use a sum function to reduce the value. Input a list of prices of grocery items you are going to buy, you will get returned the sum of all the items. 
+      </p>
+    </section>
+  
+    <p>Enter Prices of Grocery Items (comma-separated):</p>
+    <div> <input type="text" id="myReduceInputArray"></div>
+    <button onclick="myReduceArrayInput()">Reduce</button>
+    <div id="myReduceOutput"></div>
+  
+    <script src="script.js"></script>
+  </container>
+</body>
+</html
