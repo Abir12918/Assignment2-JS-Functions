@@ -94,12 +94,12 @@ function myEach(arr, callback) {
   function grabKeys(obj) {
     const keys = [];
     for (let key in obj) {
-      if (obj.hasOwnProperty(key)) {
-        keys.push(key);
-      }
+        if (obj.hasOwnProperty(key)) {
+            keys.push(key);
+        }
     }
     return keys;
-  }
+}
 
   function grabValues(obj) {
     const values = [];
@@ -132,30 +132,32 @@ function myEach(arr, callback) {
 }
 
 
-  function ValueGrabKey() {
-    const inputid = 'inputObject';
-    const outputid = 'output';
+function getKeys() {
+  const inputText = document.getElementById("inputObject").value;
 
-    const user_input = document.getElementById(inputid).value;
-    const user_object = JSON.parse(user_input); // Parse the JSON string into an object
+  try {
+      const inputObject = JSON.parse(inputText);
+      const keys = grabKeys(inputObject);
 
-    const keys = grabKeys(user_object); // Call the grabKeys function on the input object
-
-    const output_element = document.getElementById(outputid);
-
-    output_element.textContent = keys.join(', '); // Display the keys as a comma-separated string
+      const outputElement = document.getElementById("outputKeys");
+      outputElement.textContent = `Keys: ${keys.join(', ')}`;
+  } catch (error) {
+      const outputElement = document.getElementById("outputKeys");
+      outputElement.textContent = "Invalid JSON input. Please enter a valid JSON object.";
   }
+}
 
-  function ValueGrabValue() {
-    const inputid = 'inputObject';
-    const outputid = 'output';
+function getValue() {
+  const inputText = document.getElementById("inputObject").value;
 
-    const user_input = document.getElementById(inputid).value;
-    const user_object = JSON.parse(user_input); // Parse the JSON string into an object
+  try {
+      const inputObject = JSON.parse(inputText);
+      const keys = grabValues(inputObject);
 
-    const values = grabValues(user_object); // Call the grabValues function on the input object
-
-    const output_element = document.getElementById(outputid);
-
-    output_element.textContent = values.join(', '); // Display the values as a comma-separated string
+      const outputElement = document.getElementById("outputValues");
+      outputElement.textContent = `Values: ${keys.join(', ')}`; 
+  } catch (error) {
+      const outputElement = document.getElementById("outputValues");
+      outputElement.textContent = "Invalid JSON input. Please enter a valid JSON object.";
+  }
 }
