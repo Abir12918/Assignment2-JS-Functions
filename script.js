@@ -79,3 +79,80 @@ function myEach(arr, callback) {
     myEach(elements, printElement);
   }
   
+  function myLastIndexOf(arr, target) {
+    // Start from end of the array.
+    for (let i = arr.length - 1; i >= 0; i--) {
+      if (arr[i] === target) {
+        return i; // Return the index if the target element is found.
+      }
+    }
+    
+    // Return -1 if the target element is not found in the array.
+    return -1;
+  }
+
+  function grabKeys(obj) {
+    const keys = [];
+    for (let key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        keys.push(key);
+      }
+    }
+    return keys;
+  }
+
+  function grabValues(obj) {
+    const values = [];
+    for (let key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        values.push(obj[key]);
+      }
+    }
+    return values;
+  }
+
+  function ValueInputs(){
+    const inputid = 'inputArray';
+    const outputid = 'outputvalue';
+    const inputTargetid = 'inputTarget';
+
+    const user_input = document.getElementById(inputid).value;
+    const user_array = user_input.split(',');
+    
+    const target_value = +document.getElementById(inputTargetid).value;
+
+
+    const islastindex = myLastIndexOf(user_array,target_value);
+
+    const output_element = document.getElementById(outputid);
+
+    output_element.textContent = islastindex.toString();
+  }
+
+  function ValueGrabKey() {
+    const inputid = 'inputObject';
+    const outputid = 'output';
+
+    const user_input = document.getElementById(inputid).value;
+    const user_object = JSON.parse(user_input); // Parse the JSON string into an object
+
+    const keys = grabKeys(user_object); // Call the grabKeys function on the input object
+
+    const output_element = document.getElementById(outputid);
+
+    output_element.textContent = keys.join(', '); // Display the keys as a comma-separated string
+  }
+
+  function ValueGrabValue() {
+    const inputid = 'inputObject';
+    const outputid = 'output';
+
+    const user_input = document.getElementById(inputid).value;
+    const user_object = JSON.parse(user_input); // Parse the JSON string into an object
+
+    const values = grabValues(user_object); // Call the grabValues function on the input object
+
+    const output_element = document.getElementById(outputid);
+
+    output_element.textContent = values.join(', '); // Display the values as a comma-separated string
+}
