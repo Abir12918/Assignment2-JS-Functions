@@ -77,6 +77,7 @@ function processInput() {
 
     // Use myEach to print each element
     myEach(elements, printElement);
+
 }
 
 
@@ -334,3 +335,89 @@ function processPushInput() {
     outputElement.textContent = `Updated Array: [${updatedArray.join(', ')}]`;
 }
 // End of Mahathir's functions
+
+
+// Start of Muhammed's funcs
+  
+  function myLastIndexOf(arr, target) {
+    // Start from end of the array.
+    for (let i = arr.length - 1; i >= 0; i--) {
+      if (arr[i] === target) {
+        return i; // Return the index if the target element is found.
+      }
+    }
+    
+    // Return -1 if the target element is not found in the array.
+    return -1;
+  }
+
+  function grabKeys(obj) {
+    const keys = [];
+    for (let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            keys.push(key);
+        }
+    }
+    return keys;
+}
+
+  function grabValues(obj) {
+    const values = [];
+    for (let key in obj) {
+      if (obj.hasOwnProperty(key)) {
+        values.push(obj[key]);
+      }
+    }
+    return values;
+  }
+
+  function ValueInputs() {
+    const inputid = 'inputArray';
+    const outputid = 'outputvalue';
+    const inputTargetid = 'inputTarget';
+
+    const user_input = document.getElementById(inputid).value;
+    const user_array = user_input.split(',');
+
+    // Convert each element of the user_array to a number
+    const user_array_numbers = user_array.map(Number);
+
+    const target_value = +document.getElementById(inputTargetid).value;
+
+    const islastindex = myLastIndexOf(user_array_numbers, target_value);
+
+    const output_element = document.getElementById(outputid);
+
+    output_element.textContent = islastindex.toString();
+}
+
+
+function getKeys() {
+  const inputText = document.getElementById("inputObject").value;
+
+  try {
+      const inputObject = JSON.parse(inputText);
+      const keys = grabKeys(inputObject);
+
+      const outputElement = document.getElementById("outputKeys");
+      outputElement.textContent = `Keys: ${keys.join(', ')}`;
+  } catch (error) {
+      const outputElement = document.getElementById("outputKeys");
+      outputElement.textContent = "Invalid JSON input. Please enter a valid JSON object.";
+  }
+}
+
+function getValue() {
+  const inputText = document.getElementById("inputObject").value;
+
+  try {
+      const inputObject = JSON.parse(inputText);
+      const keys = grabValues(inputObject);
+
+      const outputElement = document.getElementById("outputValues");
+      outputElement.textContent = `Values: ${keys.join(', ')}`; 
+  } catch (error) {
+      const outputElement = document.getElementById("outputValues");
+      outputElement.textContent = "Invalid JSON input. Please enter a valid JSON object.";
+  }
+}
