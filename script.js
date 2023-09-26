@@ -111,23 +111,26 @@ function myEach(arr, callback) {
     return values;
   }
 
-  function ValueInputs(){
+  function ValueInputs() {
     const inputid = 'inputArray';
     const outputid = 'outputvalue';
     const inputTargetid = 'inputTarget';
 
     const user_input = document.getElementById(inputid).value;
     const user_array = user_input.split(',');
-    
+
+    // Convert each element of the user_array to a number
+    const user_array_numbers = user_array.map(Number);
+
     const target_value = +document.getElementById(inputTargetid).value;
 
-
-    const islastindex = myLastIndexOf(user_array,target_value);
+    const islastindex = myLastIndexOf(user_array_numbers, target_value);
 
     const output_element = document.getElementById(outputid);
 
     output_element.textContent = islastindex.toString();
-  }
+}
+
 
   function ValueGrabKey() {
     const inputid = 'inputObject';
