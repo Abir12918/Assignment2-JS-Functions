@@ -32,7 +32,7 @@ body {
     background-color: #2980b9;
 }
 
-h1 {
+h1,h3{
     background-color: #ffffff;
     color: #000000;
     text-align: center;
@@ -59,7 +59,7 @@ input[type="text"] {
     border-radius: 5px;
 }
 
-button {
+button, a {
     background-color: #0066cc;
     /* Blue button background color */
     color: #fff;

@@ -16,12 +16,12 @@ function startsWithA(word) {
 
 // Function to filter words and display the result
 function filterWords() {
-    const inputArray = document.getElementById('inputArray').value;
+    const inputArray = document.getElementById('inputArray1').value;
     const words = inputArray.split(',').map(word => word.trim());
 
     const filteredWords = myFilter(words, startsWithA);
 
-    const outputDiv = document.getElementById('output');
+    const outputDiv = document.getElementById('output1');
 
     // Display the filtered words as an array
     outputDiv.textContent = `Filtered words: [${filteredWords.join(', ')}]`;
@@ -41,12 +41,12 @@ const squareNumber = (number) => number * number;
 
 // Function to calculate squares and display the result as an array
 const calculateSquares = () => {
-    const inputArray = document.getElementById('inputArray').value;
+    const inputArray = document.getElementById('inputArray2').value;
     const numbers = inputArray.split(',').map((number) => parseFloat(number.trim()));
 
     const squares = myMap(numbers, squareNumber);
 
-    const outputDiv = document.getElementById('output');
+    const outputDiv = document.getElementById('output2');
 
     // Format the result as an array and display it
     outputDiv.textContent = `The square array is [${squares.join(', ')}]`;
@@ -63,16 +63,16 @@ function myEach(arr, callback) {
 
 // Callback function to print each element
 function printElement(element) {
-    const outputDiv = document.getElementById('output');
+    const outputDiv = document.getElementById('output3');
     outputDiv.innerHTML += `${element}<br>`;
 }
 
 // Function to process user input
 function processInput() {
-    const inputArray = document.getElementById('inputArray').value;
+    const inputArray = document.getElementById('inputArray3').value;
     const elements = inputArray.split(',').map(element => element.trim());
 
-    const outputDiv = document.getElementById('output');
+    const outputDiv = document.getElementById('output3');
     outputDiv.innerHTML = ''; // Clear previous output
 
     // Use myEach to print each element
