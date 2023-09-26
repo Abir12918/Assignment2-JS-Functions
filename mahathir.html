@@ -16,7 +16,7 @@
         </p>
     </section>
 
-    <p>Enter the numbers (comma-spaced):</p>
+    <p>Enter any elements (comma-separated):</p>
     <input type="text" id="inputArray">
     <button onclick="processInput()">Enter</button>
     <div id="output"></div>
@@ -27,6 +27,57 @@
     <input type="text" id="inputIncludeArray">
     <button onclick="processIncludeInput(1)">Enter</button>
     <div id="Includeoutput"></div>
+
+
+
+    <h1>myIndexOf Demo</h1>
+    <section>
+        <h2>Description</h2>
+        <p>
+            The myIndexOf function is a custom JavaScript function that mimics the behavior of the native Array.prototype.indexOf method. It takes in two arguments: an array of elements and a target element to search for within the array. The function then returns
+            the index of the first occurrence of the target element within the array, or -1 if the target element is not found in the array.
+        </p>
+    </section>
+
+    <!-- Input and Output for the first set of data -->
+    <p>Enter any element(comma-separated):</p>
+    <input type="text" id="inputArray1">
+
+    <button onclick="indexOfInput()">Enter</button>
+    <div id="output1"></div>
+
+
+    <!-- Input and Output for the second set of data -->
+    <p>Index of target element: </p>
+    <input type="text" id="inputIndexArray">
+    <button onclick="processIndexInput()">Enter</button>
+    <div id="Indexoutput"></div>
+
+    <script src="script.js"></script>
+
+    <h1>myPush Demo</h1>
+    <section>
+        <h2>Description</h2>
+        <p>
+            myPush is a custom JavaScript function that mimics the behavior of the native Array.prototype.push method. It takes in two parameters: an array (arr) and an element to add to the end of the array (elementToAdd). This function appends the elementToAdd
+            to the end of the arr and returns the updated array.
+        </p>
+    </section>
+
+    <!-- Input and Output for the first set of data -->
+    <p>Enter any elements(comma-separated):</p>
+    <input type="text" id="inputArray2">
+
+    <button onclick="pushInput()">Enter</button>
+    <div id="output2"></div>
+
+
+    <!-- Input and Output for the second set of data -->
+    <p>Enter Element that you would like to add to the array: </p>
+    <input type="text" id="inputPushArray">
+    <button onclick="processPushInput()">Enter</button>
+    <div id="Pushoutput"></div>
+
     <script src="script.js"></script>
 </body>
 
